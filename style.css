@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: verdana;
+}
+
+nav {
+    display: inline;
+    position: fixed;
+    bottom: 20%;
+    right: 50%;
+    text-align: center;
+    padding-top: 30px;
+    text-transform: uppercase;
+
+}
+
+nav a {
+    
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 30px;
+   
+}
+
+nav a:hover {
+   opacity: 1;
+}
+nav:hover {
+    cursor: pointer;
+}
+a::before {
+    position: absolute;
+    transform: translateX(100%) translateY(0%);
+    content: "";
+    width: 110px;
+    height: 30px;
+    color: black;
+    background: rgb(8, 8, 8);
+    opacity: 0.5;
+    transition: 0.3s;
+    z-index: -1;
+   
+}
+
+a:hover:before {
+    background: red;
+    transform: translateX(0%) translateY(0%) scaleY(1);
+}
+a:after {
+    position: absolute;
+    right: -50px;
+    width: 5px;
+    height: 5px;
+    content: "";
+    color: black;
+    background: rgb(0, 0, 0);
+    transition: 0.3s;
+    transition-delay: 0.1s;
+}
+
+a:hover:after {
+     position: absolute;
+    right: -50px;
+    width: 120%;
+    height: 5px;
+    content: "";
+    color: black;
+    background: rgb(0, 0, 0);
+    transition: 0.3s;
+    transition-delay: 0.1s;
+    background: red;
+}
